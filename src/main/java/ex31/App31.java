@@ -6,16 +6,32 @@ public class App31
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
+        String ageInput;
+        String hrInput;
         double targetHeartRate;
         int age = 0;
         int restingHeartRate = 0;
         double intensity = 0;
 
-        System.out.print("Enter your age: ");
-        age = sc.nextInt();
+        do
+        {
+            System.out.print("Enter your age: ");
+            ageInput = sc.nextLine();
+            if(!ageInput.matches("[0123456789.]+"))
+            {
+                System.out.println("Invalid input. Enter a number.");
+            }
+        }while(!ageInput.matches("[0123456789.]+"));
 
-        System.out.print("Enter your resting heart rate: ");
-        restingHeartRate = sc.nextInt();
+        do
+        {
+            System.out.print("Enter your resting heart rate: ");
+            hrInput = sc.nextLine();
+            if(!hrInput.matches("[0123456789.]+"))
+            {
+                System.out.println("Invalid input. Enter a number.");
+            }
+        }while(!hrInput.matches("[0123456789.]+"));
 
         System.out.println("Intensity    | Rate");
         System.out.println("-------------|--------");
