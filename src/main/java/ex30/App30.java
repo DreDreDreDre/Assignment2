@@ -6,7 +6,7 @@ import java.util.Scanner;
  *  Copyright 2021 Andre Jara
  */
 
-public class App
+public class App30
 {
     public static void main(String[] args)
     {
